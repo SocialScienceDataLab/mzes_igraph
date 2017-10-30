@@ -1,0 +1,7 @@
+
+germany <- read.csv('germany_map.csv', stringsAsFactors = FALSE)
+require(igraph)
+
+g <- igraph::simplify(graph.data.frame(germany, directed = FALSE))
+
+plot(g, vertex.size = degree(g) * 3)
