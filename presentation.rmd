@@ -119,16 +119,16 @@ knitr::kable(data.frame(from = c('chainsawriot', 'kfc', 'kfc', 'kfc', 'kfc', 'kf
 
 Both node and edge can be weighted.
 
-## Presentation
+## Representation
 
 ```{r rnv, echo = FALSE , message = FALSE}
 knitr::kable(data.frame(from = c('Mannheim', 'Mannheim', 'Ludwigshanfen', 'Mannheim'), to = c('Ludwigshanfen', 'Heidelberg', 'Heidelberg', 'Frankfurt'), distance = c(2.9, 20.3, 22, 76.7)), caption = "Edgelist")
 ```
 
-## Presentation
+## Representation
 
 1. edgelist
-2. adjanceny matrix
+2. adjaceny matrix
 
 Edgelist is the adjacency matrix in triplet format(i,j,k).
 
@@ -237,7 +237,9 @@ matrix(c(1,0,0,0,0,0,
 ## Affiliation data frame
 
 ```{r}
-ap <- data.frame(author = c('Jäger', 'Stecker', 'Däubler', 'Scholten', 'Tieben', 'Braun', 'Popa', 'Theocharis', 'van Deth', 'Däubler','Benoit'), paper = c('p1', 'p2', 'p2', 'p3', 'p3', 'p4', 'p4', 'p5', 'p5', 'p6','p6'))
+ap <- data.frame(
+author = c('Jäger', 'Stecker', 'Däubler', 'Scholten', 'Tieben', 'Braun', 'Popa', 'Theocharis', 'van Deth', 'Däubler','Benoit'), 
+paper = c('p1', 'p2', 'p2', 'p3', 'p3', 'p4', 'p4', 'p5', 'p5', 'p6','p6'))
 knitr::kable(ap)
 ```
 
@@ -299,6 +301,8 @@ Example: degree centrality, eigenvector centrality, betweenness
 1. For each pair of vertices (s,t), compute the shortest paths between them.
 2. For each pair of vertices (s,t), determine the fraction of shortest paths that pass through the vertex in question (here, vertex v).
 3. Sum this fraction over all pairs of vertices (s,t).
+
+Source: Wikipedia. Freeman, Linton. Sociometry 1977.
 
 ## Betweenness
 
@@ -396,7 +400,7 @@ plot(comm2, karate)
 	- Edge level: Structural bridge
 	- Graph level: Community detection
 	
-Example: MZES collabration network
+Example: [MZES collabration network](http://www.mzes.uni-mannheim.de/d7/en)
 
 ## whoami
 
@@ -408,5 +412,4 @@ twitter / github: @[chainsawriot](https://github.com/chainsawriot)
 ![jcmc](jcmc.png)
 
 # End
-
 
